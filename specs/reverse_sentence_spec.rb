@@ -1,15 +1,16 @@
-require 'minitest/autorun'
-require 'minitest/reporters'
-require_relative '../lib/reverse_sentence'
+
+require "minitest/autorun"
+require "minitest/reporters"
+require_relative "../lib/reverse_sentence"
 
 describe "reverse sentence" do
   describe "basic tests" do
     it "reverse a sentence with two words" do
       test_string = "hello, world"
 
-      reverse_sentence(test_string)
+      new_string = reverse_sentence(test_string)
 
-      test_string.must_equal "world hello,"
+      new_string.must_equal "world hello,"
     end
 
     it "reverse a sentence with three words" do
